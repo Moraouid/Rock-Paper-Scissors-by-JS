@@ -1,7 +1,7 @@
 function getComputerChoice()
 {
 	if (Math.floor(Math.random() * 3) == 0)
-		return "rook";
+		return "rock";
 	else if (Math.floor(Math.random() * 3) == 1)
 		return "paper";
 	else (Math.floor(Math.random() * 3) == 2)
@@ -10,7 +10,7 @@ function getComputerChoice()
 
 function getHumanChoice()
 {
-	const choice = prompt("rook, paper or scissors?")
+	const choice = prompt("rock, paper or scissors?")
 	return choice;
 }
 
@@ -24,7 +24,7 @@ function playRound(HumanChoice, ComputerChoice)
 
 	if (human == computer)
 		console.log("Draw!");
-	else if (human == "rook" && computer == "scissors" || human == "paper" && computer == "rook" || human == "scissors" && computer == "paper")
+	else if (human == "rock" && computer == "scissors" || human == "paper" && computer == "rock" || human == "scissors" && computer == "paper")
 	{
 		console.log("You win! " + human + " beats " + computer);
 		humanScore++;
